@@ -28,5 +28,5 @@ Usually O(n) — each element is visited at most twice (once added, once removed
 - Hash Maps (for frequency/count)
 - Deques (for monotonic queues)
 
-## 🧵 From Code → Pattern → System
+## 🧵 From Algo to Architecture
 A sliding window isn’t just a problem-solving trick — it's a core concept in designing real-time processing systems.
