@@ -24,11 +24,13 @@ This repo is for you.
 
 Each folder is a **pattern** (e.g., sliding-window, union-find, prefix-sum), containing:
 
+```
 pattern-name/ 
 ├── notes.md # Core idea, time complexity, real-world usage 
 ├── problems/ # Leetcode problems with solutions and personal notes 
 ├── real-world/ # Real systems/scenarios using this pattern 
 ├── system-components/ # Architecture components related to this pattern
+```
 
 
 ---
