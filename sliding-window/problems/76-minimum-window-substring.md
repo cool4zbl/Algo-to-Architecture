@@ -19,6 +19,7 @@ Sliding Window + Hash Map + Two Pointers
 - ❌ Wrong updates to `left`, or shrinking window too early
 
 ## ✅ Correct Implementation
+
 ```python
 from collections import Counter, defaultdict
 
@@ -30,7 +31,7 @@ def minWindow(s: str, t: str) -> str:
     window = defaultdict(int)
     have = 0
     min_len = float('inf')
-    res = [-1, -1]
+    res = [-1, -1] # to store the result since left/right is sliding
 
     left = 0
     for right, c in enumerate(s):
@@ -38,6 +39,7 @@ def minWindow(s: str, t: str) -> str:
         if c in need and window[c] == need[c]:
             have += 1
 
+        # shrink the window if we have all characters
         while have == len(need):
             if (right - left + 1) < min_len:
                 min_len = right - left + 1
@@ -49,7 +51,7 @@ def minWindow(s: str, t: str) -> str:
                 have -= 1
             left += 1
 
-    l, r = res
+    l, r = res # unpack the result from res
     return s[l:r+1] if min_len != float('inf') else ''
 ```
 
