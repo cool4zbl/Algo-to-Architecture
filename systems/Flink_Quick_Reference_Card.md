@@ -1,4 +1,4 @@
-# Flink 快速理解卡片 (中英文对照)
+# Flink Quick Reference Card
 
 ## What is Flink?
 
@@ -21,8 +21,25 @@
 | 流处理作业      | Streaming Job          | 运行在 Flink 上的应用管道，由多个算子组成 |
 
 
+---
+## Quick comparison Stateless vs Stateful
+| 特性           | 无状态处理 (Stateless) | 有状态处理 (Stateful) |
+|--------------|-------------------------|------------------|
+| 处理模型         | 每个事件独立处理       | 依赖于之前的状态         |
+| 例子           | 数据过滤、转换         | 滑动窗口聚合、去重        |
+| 事件顺序         | 无需保证               | 需要保证             |
+| 状态存储         | 无                     | 有                |
+| 容错机制         | 无                     | Checkpoint       |
+| Exactly-once | 无                     | 依赖 state 实现      |
+| 处理延迟         | 较低                   | 较高               |
+| 复杂性          | 较低                   | 较高               |
+
+
+
 
 ---
+
+
 
 ## Common Use Cases
 
