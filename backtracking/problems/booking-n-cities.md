@@ -44,12 +44,12 @@ def find_valid_trip_costs(days_per_city, budget, daily_price_per_city):
     result = set()
     N = len(cities)
 
-    for city_order in permutations(cities):
+    for city_order in permutations(cities): # O(N!)
         total_cost = 0
-        for i, city in enumerate(city_order):
+        for i, city in enumerate(city_order): # O(N)
             start_day = i * days_per_city
             end_day = start_day + days_per_city
-            total_cost += sum(daily_price_per_city[city][start_day:end_day])
+            total_cost += sum(daily_price_per_city[city][start_day:end_day]) # O(D)
         if total_cost <= budget:
             result.add(total_cost)
 
