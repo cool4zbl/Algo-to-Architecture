@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 What is this?
+## What is this?
 
 This repo maps a structured path from algorithm problems to architectural thinking:
 
@@ -20,7 +20,7 @@ This repo is for you.
 
 ---
 
-## 🧭 Structure
+## Structure
 
 Each folder is a **pattern** (e.g., sliding-window, union-find, prefix-sum), containing:
 
@@ -35,7 +35,7 @@ pattern-name/
 
 ---
 
-## 🧪 Example: Sliding Window
+## Example: Sliding Window
 
 - Problems:
   - [239. Sliding Window Maximum](./sliding-window/problems/239-sliding-window-maximum.md)
@@ -46,7 +46,7 @@ pattern-name/
 
 ---
 
-## 🎯 Who is this for?
+## Who is this for?
 
 - Engineers preparing for system design interviews
 - Developers who want to **bridge the gap between code and system design**
@@ -60,7 +60,7 @@ This project is evolving continuously. Feel free to watch/star/fork if you want 
 
 ---
 
-## 💬 Feedback / Collaboration
+## Feedback / Collaboration
 
 Spotted something cool or want to contribute? Feel free to open an issue or drop me a message!
 
