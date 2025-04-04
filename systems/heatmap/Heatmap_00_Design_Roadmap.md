@@ -1,9 +1,19 @@
-# 🧭 System Design – Heatmap Service (Module Roadmap)
+# Design a geographic heatmap of driver locations
 
 A real-time geo-location heatmap system for visualizing driver density on a map, similar to what Uber or delivery platform use.
 
 
 ---
+
+<img width="905" alt="image" src="https://github.com/user-attachments/assets/03b51729-1510-4764-877e-4b946e493d4d" />
+
+
+
+
+---
+
+> We want to design a system that collects frequent location updates from tens of thousands of drivers, aggregates them in real-time into a geographic heatmap (i.e., driver density by area), and provides both a real-time view and batch historical analytics.
+
 Key Functional Requirements
 
 •	Drivers periodically upload their current GPS location.
