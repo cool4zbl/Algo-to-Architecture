@@ -32,17 +32,27 @@ Event Schema Design(LocationUpdateEvent):
 
 ## Architecture
 
+```
+[Driver App] 
+    |
+    |  HTTP/gRPC Post Location
+    v
+[API Gateway / Collector Service]
+    |
+    |  Async push to Kafka
+    v
+[Kafka Topic: driver-location-updates]
+```
+
+	•	schema validation（使用 Protobuf / JSON schema）
+	•	authentication（driver token）
+	•	load shedding（drop too frequent updates）
+
 1. Driver App periodically pushes location updates via HTTP/gRPC to a Collector Service
 2. Collector validates and formats the event
 3. Collector asynchronously publishes events to a Kafka topic
 4. Kafka serves as a buffer and fan-out point to downstream consumers
 
-## Technologies
-
-- Protocol: HTTP or gRPC
-- Message Queue: Apache Kafka (or Google PubSub / AWS Kinesis)
-- Message Format: JSON or Protobuf
-- Optionally use load balancer or API gateway (e.g., NGINX, Envoy)
 
 ## Key Design Patterns (Ingestion Layer)
 
