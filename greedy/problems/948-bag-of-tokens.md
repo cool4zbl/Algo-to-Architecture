@@ -44,6 +44,9 @@ while left <= right:
 ```
 - Failed test case: `[33,4,28,24,96]`, power = 35
 - Mistake: batch-buy and batch-sell skip optimal intermediate states, 需要单步细粒度的控制，因为每次 sell/buy 都会影响后续的选择。
+- **当前循环里“买尽可能多”然后“卖尽可能多”分两段进行，会错过在卖一次之后又能继续买小令牌的场景。**
+换句话说，需要在同一层循环中灵活决定：“能买就买；买不了就卖一点再买”，而不能一口气把所有能买的都买光、再把能卖的都卖光。因为卖一次之后得到的 power 可能让你再次买更多小令牌。
+
 
 ### ✅ Optimal solution: Single-step greedy decisions
 ```python
